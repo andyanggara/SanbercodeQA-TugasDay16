@@ -1,0 +1,12 @@
+class data():
+    correctUser = "standard_user"
+    wrongUser = "x"
+    lockedUser = "locked_out_user"
+    problemUser = "problem_user"
+    correctPass = "secret_sauce"
+    wrongPass = "x"
+    baseUrl = "https://www.saucedemo.com"
+    notMatch = "Epic sadface: Username and password do not match any user in this service"
+    emptyUser = "Epic sadface: Username is required"
+    emptyPass = "Epic sadface: Password is required"
+    lockUser = "Epic sadface: Sorry, this user has been locked out."
