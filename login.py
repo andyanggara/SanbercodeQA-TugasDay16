@@ -71,7 +71,7 @@ class TestLogin(unittest.TestCase):
         errorMessage = driver.find_element(By.CSS_SELECTOR, elem.errorMessage).text
         self.assertEqual(data.emptyPass, errorMessage)
 
-    #   Test Case 4: Failed login with incorrect username
+    #   Test Case 5: Failed login with incorrect username
     def test_incorrect_username(self):
         driver = self.browser
         driver.maximize_window()
@@ -84,7 +84,7 @@ class TestLogin(unittest.TestCase):
         errorMessage = driver.find_element(By.CSS_SELECTOR, elem.errorMessage).text
         self.assertEqual(data.notMatch, errorMessage)
     
-    #   Test Case 5: Failed login with incorrect password
+    #   Test Case 6: Failed login with incorrect password
     def test_incorrect_password(self):
         driver = self.browser
         driver.maximize_window()
@@ -97,7 +97,7 @@ class TestLogin(unittest.TestCase):
         errorMessage = driver.find_element(By.CSS_SELECTOR, elem.errorMessage).text
         self.assertEqual(data.notMatch, errorMessage)
     
-    #   Test Case 6: Failed login with locked user
+    #   Test Case 7: Failed login with locked user
     def test_locked_user(self):
         driver = self.browser
         driver.maximize_window()
@@ -111,7 +111,7 @@ class TestLogin(unittest.TestCase):
         self.assertEqual(data.lockUser, errorMessage)
 
     def tearDown(self):
-        sleep(2)
+        sleep(1)
         self.browser.close()
 
 
